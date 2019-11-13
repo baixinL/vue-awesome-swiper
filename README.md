@@ -19,3 +19,15 @@
 		destroyed(){
 				this.swiper.destroy();
 			}
+
+
+## 错误2
+### 使用loop:true选项实现轮播功能时，出现空白页，克隆的数据不全。
+    情景：  在最后一张切换至第一张时，出现一个空白页，它缺少数据，所以时空白的。具体请查看我的repository: vue-swiper。
+		
+ * ## 解决错误2
+		mounted() {
+			window.addEventListener('load', (event) => {
+				this.swiper.init();
+			});
+		}
